@@ -6,9 +6,19 @@
    </svg>
 </button>
 
-<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
-      <ul class="space-y-2 font-medium">
+<aside id="default-sidebar" class="dashboard-sidebar fixed top-0 left-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+   <div class="sidebar-inner h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
+      <div class="sidebar-header">
+         <div class="shop-avatar">ST</div>
+         <div class="shop-meta">
+            <p class="shop-label">StoreTech</p>
+            <p class="shop-subtitle">Multi-channel store overview</p>
+         </div>
+      </div>
+
+      <div class="sidebar-section-label">Navigation</div>
+
+      <ul class="sidebar-nav space-y-1.5 font-medium">
          <li>
             <a routerLink="/dashboard" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group">
                <svg class="w-5 h-5 transition duration-75 group-hover:text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
@@ -43,11 +53,22 @@
             </a>
          </li>
       </ul>
+
+      <div class="sidebar-footer">
+         <div class="sidebar-kpi">
+            <p class="label">Todays revenue</p>
+            <p class="value">$2,430.80</p>
+         </div>
+         <div class="sidebar-status">
+            <span class="status-dot"></span>
+            <span class="status-text">All systems operational</span>
+         </div>
+      </div>
    </div>
 </aside>
 
-<div class="p-4 sm:ml-64">
-   <div class="p-4 border-1 border-default border-dashed rounded-base">
+<div class="dashboard-main p-4 sm:ml-64">
+   <div class="dashboard-main-card p-4 border-1 border-default rounded-base">
       <router-outlet></router-outlet>
    </div>
 </div>
