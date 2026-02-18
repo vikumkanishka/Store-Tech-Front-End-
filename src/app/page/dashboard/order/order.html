@@ -1,1 +1,214 @@
-<p>order works!</p>
+<div class="order-wrapper">
+  <header class="order-header">
+    <div>
+      <h1 class="order-title">Orders</h1>
+      <p class="order-subtitle">Create new tickets, manage items, and review recent orders.</p>
+    </div>
+    <div class="order-header-actions">
+      <button type="button" class="btn btn-ghost">Hold Order</button>
+      <button type="button" class="btn btn-ghost">Clear</button>
+      <button type="button" class="btn btn-primary">New Order</button>
+    </div>
+  </header>
+
+  <main class="order-main">
+    <section class="order-left">
+      <div class="order-toolbar">
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Search items or scan barcode..."
+            aria-label="Search items"
+          />
+        </div>
+        <div class="filter-chips">
+          <button class="chip chip-active" type="button">All</button>
+          <button class="chip" type="button">Food</button>
+          <button class="chip" type="button">Drinks</button>
+          <button class="chip" type="button">Snacks</button>
+          <button class="chip" type="button">Others</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-name">Cappuccino</div>
+          <div class="product-meta">
+            <span class="badge">Drink</span>
+            <span class="price">$3.50</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Cheese Burger</div>
+          <div class="product-meta">
+            <span class="badge">Food</span>
+            <span class="price">$8.90</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Fries</div>
+          <div class="product-meta">
+            <span class="badge">Side</span>
+            <span class="price">$2.80</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Iced Latte</div>
+          <div class="product-meta">
+            <span class="badge">Drink</span>
+            <span class="price">$4.10</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Brownie</div>
+          <div class="product-meta">
+            <span class="badge">Dessert</span>
+            <span class="price">$3.20</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-name">Water 500ml</div>
+          <div class="product-meta">
+            <span class="badge">Drink</span>
+            <span class="price">$1.20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-right">
+      <div class="cart-card">
+        <div class="cart-header">
+          <div>
+            <h2>Current Order</h2>
+            <span class="cart-tag">Table 4 • Dine in</span>
+          </div>
+          <span class="cart-id">#ORD-1024</span>
+        </div>
+
+        <div class="cart-body">
+          <div class="cart-row cart-row-head">
+            <span>Item</span>
+            <span>Qty</span>
+            <span>Price</span>
+            <span>Total</span>
+          </div>
+          <div class="cart-items">
+            <div class="cart-row">
+              <div class="cart-item-main">
+                <span class="cart-item-name">Cappuccino</span>
+                <span class="cart-item-note">Extra hot, no sugar</span>
+              </div>
+              <div class="cart-qty">
+                <button type="button" class="qty-btn">-</button>
+                <span>2</span>
+                <button type="button" class="qty-btn">+</button>
+              </div>
+              <span class="cart-price">$3.50</span>
+              <span class="cart-line-total">$7.00</span>
+            </div>
+
+            <div class="cart-row">
+              <div class="cart-item-main">
+                <span class="cart-item-name">Cheese Burger</span>
+                <span class="cart-item-note">No onions</span>
+              </div>
+              <div class="cart-qty">
+                <button type="button" class="qty-btn">-</button>
+                <span>1</span>
+                <button type="button" class="qty-btn">+</button>
+              </div>
+              <span class="cart-price">$8.90</span>
+              <span class="cart-line-total">$8.90</span>
+            </div>
+
+            <div class="cart-row">
+              <div class="cart-item-main">
+                <span class="cart-item-name">Fries</span>
+                <span class="cart-item-note">Large</span>
+              </div>
+              <div class="cart-qty">
+                <button type="button" class="qty-btn">-</button>
+                <span>1</span>
+                <button type="button" class="qty-btn">+</button>
+              </div>
+              <span class="cart-price">$2.80</span>
+              <span class="cart-line-total">$2.80</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$18.70</span>
+          </div>
+          <div class="summary-row">
+            <span>Discount</span>
+            <span>- $1.80</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax</span>
+            <span>$1.90</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span>$18.80</span>
+          </div>
+        </div>
+
+        <div class="cart-actions">
+          <button type="button" class="btn btn-ghost">Add Note</button>
+          <button type="button" class="btn btn-primary">Charge $18.80</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="recent-orders">
+    <div class="recent-header">
+      <h3>Recent Orders</h3>
+      <button type="button" class="link-btn">View all</button>
+    </div>
+    <div class="recent-table-wrapper">
+      <table class="recent-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Type</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#ORD-1023</td>
+            <td>Walk-in</td>
+            <td>Dine in</td>
+            <td>$24.90</td>
+            <td><span class="status-pill status-paid">Paid</span></td>
+            <td>2 min ago</td>
+          </tr>
+          <tr>
+            <td>#ORD-1022</td>
+            <td>John D.</td>
+            <td>Take away</td>
+            <td>$12.40</td>
+            <td><span class="status-pill status-preparing">Preparing</span></td>
+            <td>8 min ago</td>
+          </tr>
+          <tr>
+            <td>#ORD-1021</td>
+            <td>Online</td>
+            <td>Delivery</td>
+            <td>$32.10</td>
+            <td><span class="status-pill status-open">Open</span></td>
+            <td>18 min ago</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
