@@ -3,6 +3,8 @@ import { Dashboard } from './page/dashboard/dashboard';
 import { Login } from './page/login/login';
 import { Item } from './page/dashboard/item/item';
 import { Order } from './page/dashboard/order/order';
+import { Customer } from './page/dashboard/customer/customer';
+import { DashboardRoot } from './page/dashboard/dashboard-root/dashboard-root';
 
 export const routes: Routes = [
     {
@@ -10,8 +12,12 @@ export const routes: Routes = [
         component:Dashboard,
         children:[
             {
+                path:"",
+                component:DashboardRoot
+            },
+            {
                 path:"customer",
-                component:Dashboard
+                component:Customer
             },
             {
                 path:"item",
