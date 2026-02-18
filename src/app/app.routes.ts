@@ -5,6 +5,7 @@ import { Item } from './page/dashboard/item/item';
 import { Order } from './page/dashboard/order/order';
 import { Customer } from './page/dashboard/customer/customer';
 import { DashboardRoot } from './page/dashboard/dashboard-root/dashboard-root';
+import { Home } from './page/home/home';
 
 export const routes: Routes = [
     {
@@ -32,5 +33,9 @@ export const routes: Routes = [
     {
         path:"login",
         component:Login
+    },
+    {
+        path:"home",
+        component:Home
     }
 ];
