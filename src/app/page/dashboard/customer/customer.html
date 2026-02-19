@@ -13,45 +13,49 @@
 				<div class="form-grid">
 					<div class="form-field">
 						<label for="customer-id">id</label>
-						<input id="customer-id" type="text" placeholder="Enter ID" />
+						<input id="customer-id" type="text" [(ngModel)]="customerObj.id" placeholder="Enter ID" />
 					</div>
 					<div class="form-field">
 						<label for="customer-Title">Title</label>
-						<input id="customer-Title" type="text" placeholder="Enter Title" />
+						<input id="customer-Title" type="text" [(ngModel)]="customerObj.title" placeholder="Enter Title" />
 					</div>
 					<div class="form-field">
 						<label for="customer-Name">Name</label>
-						<input id="customer-Name" type="text" placeholder="Enter Name" />
+						<input id="customer-Name" type="text" [(ngModel)]="customerObj.name" placeholder="Enter Name" />
 					</div>
                     <div class="form-field">
 						<label for="customer-dob">Date Of Birth</label>
-						<input id="customer-dob" type="date" placeholder="dd-mm-yy" />
+						<input id="customer-dob" type="date" [(ngModel)]="customerObj.dob" placeholder="dd-mm-yy" />
 					</div>
                     <div class="form-field">
 						<label for="customer-Salary">Salary</label>
-						<input id="customer-Salary" type="text" placeholder="Enter Salary" />
+						<input id="customer-Salary" type="text" [(ngModel)]="customerObj.salary" placeholder="Enter Salary" />
 					</div>
 					<div class="form-field">
 						<label for="customer-address">Address</label>
-						<input id="customer-address" type="text" placeholder="Street, city, ZIP" />
+						
+                        <input 
+                            id="customer-address" [(ngModel)]="customerObj.address" 
+                            type="text" 
+                            placeholder="Street, city, ZIP" />
 					</div>
                     <div class="form-field">
 						<label for="customer-City">City</label>
-						<input id="customer-City" type="text" placeholder="Enter City" />
+						<input id="customer-City" type="text" [(ngModel)]="customerObj.city" placeholder="Enter City" />
 					</div>
                     <div class="form-field">
 						<label for="customer-Province">Province</label>
-						<input id="customer-Province" type="text" placeholder="Enter Province" />
+						<input id="customer-Province" type="text" [(ngModel)]="customerObj.province" placeholder="Enter Province" />
 					</div>
                     <div class="form-field">
 						<label for="customer-PostalCode">Postal Code</label>
-						<input id="customer-PostalCode" type="text" placeholder="Enter PostalCode" />
+						<input id="customer-PostalCode" type="text" [(ngModel)]="customerObj.postalCode" placeholder="Enter PostalCode" />
 					</div>
 				</div>
 
 				<div class="form-actions">
 					<button type="button" class="btn btn-ghost">Clear</button>
-					<button type="submit" class="btn btn-primary">Save Customer</button>
+                <button type="button" (click)="addCustomer()" class="btn btn-primary">Save Customer</button>
 				</div>
 			</div>
 		</section>
