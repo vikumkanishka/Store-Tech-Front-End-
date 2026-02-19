@@ -1,2 +1,87 @@
-<p>customer works!</p>
+<div class="customer-wrapper">
+	<header class="customer-header">
+		<div>
+			<h1 class="customer-title">Customers</h1>
+			<p class="customer-subtitle">Create and manage your store customers.</p>
+		</div>
+	</header>
+
+	<main class="customer-main">
+		<section class="customer-form-card">
+			<h2>New Customer</h2>
+			<div>
+				<div class="form-grid">
+					<div class="form-field">
+						<label for="customer-name">Full name</label>
+						<input id="customer-name" type="text" placeholder="Enter full name" />
+					</div>
+					<div class="form-field">
+						<label for="customer-phone">Phone</label>
+						<input id="customer-phone" type="tel" placeholder="Enter phone number" />
+					</div>
+					<div class="form-field">
+						<label for="customer-email">Email</label>
+						<input id="customer-email" type="email" placeholder="Enter email address" />
+					</div>
+					<div class="form-field form-field-full">
+						<label for="customer-address">Address</label>
+						<input id="customer-address" type="text" placeholder="Street, city, ZIP" />
+					</div>
+					<div class="form-field form-field-full">
+						<label for="customer-notes">Notes</label>
+						<textarea
+							id="customer-notes"
+							rows="3"
+							placeholder="Additional information about the customer"
+						></textarea>
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button type="button" class="btn btn-ghost">Clear</button>
+					<button type="submit" class="btn btn-primary">Save Customer</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="customer-list-card">
+			<div class="list-header">
+				<h2>Recent Customers</h2>
+				<button type="button" class="link-btn">View all</button>
+			</div>
+
+			<div class="list-table-wrapper">
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Title</th>
+							<th>DOB</th>
+                            <th>Salary</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Province</th>
+                            <th>Postal code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let customer of customerList">
+							<td>{{customer.id}}</td>
+							<td>{{customer.name}}</td>
+							<td>{{customer.title}}</td>
+							<td>{{customer.dob}}</td>
+                            <td>{{customer.salary}}</td>
+                            <td>{{customer.address}}</td>
+                            <td>{{customer.city}}</td>
+                            <td>{{customer.province}}</td>
+                            <td>{{customer.postalCode}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+</div>
+
 

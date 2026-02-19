@@ -1,1 +1,95 @@
-<p>item works!</p>
+<div class="item-wrapper">
+	<header class="item-header">
+		<div>
+			<h1 class="item-title">Items</h1>
+			<p class="item-subtitle">Create and manage the products available in your store.</p>
+		</div>
+	</header>
+
+	<main class="item-main">
+		<section class="item-form-card">
+			<h2>New Item</h2>
+			<form>
+				<div class="form-grid">
+					<div class="form-field">
+						<label for="item-name">Item name</label>
+						<input id="item-name" type="text" placeholder="Enter item name" />
+					</div>
+					<div class="form-field">
+						<label for="item-sku">SKU / Code</label>
+						<input id="item-sku" type="text" placeholder="Enter item code" />
+					</div>
+					<div class="form-field">
+						<label for="item-category">Category</label>
+						<input id="item-category" type="text" placeholder="e.g. Drinks, Food" />
+					</div>
+					<div class="form-field">
+						<label for="item-price">Price</label>
+						<input id="item-price" type="number" min="0" step="0.01" placeholder="0.00" />
+					</div>
+					<div class="form-field">
+						<label for="item-stock">Stock</label>
+						<input id="item-stock" type="number" min="0" step="1" placeholder="0" />
+					</div>
+					<div class="form-field form-field-full">
+						<label for="item-description">Description</label>
+						<textarea
+							id="item-description"
+							rows="3"
+							placeholder="Short description of the item"
+						></textarea>
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button type="button" class="btn btn-ghost">Clear</button>
+					<button type="submit" class="btn btn-primary">Save Item</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="item-list-card">
+			<div class="list-header">
+				<h2>Item List</h2>
+				<button type="button" class="link-btn">View all</button>
+			</div>
+
+			<div class="list-table-wrapper">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Category</th>
+							<th>Price</th>
+							<th>Stock</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cappuccino</td>
+							<td>Drink</td>
+							<td>$3.50</td>
+							<td>48</td>
+							<td><span class="status-pill status-active">In stock</span></td>
+						</tr>
+						<tr>
+							<td>Cheese Burger</td>
+							<td>Food</td>
+							<td>$8.90</td>
+							<td>25</td>
+							<td><span class="status-pill status-active">In stock</span></td>
+						</tr>
+						<tr>
+							<td>Water 500ml</td>
+							<td>Drink</td>
+							<td>$1.20</td>
+							<td>0</td>
+							<td><span class="status-pill status-inactive">Out of stock</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+</div>
