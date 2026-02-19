@@ -87,7 +87,7 @@
 .customer-main {
 	margin-top: 1.5rem;
 	display: grid;
-	grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+	grid-template-columns: minmax(0, 1fr);
 	gap: 1.25rem;
 }
 
