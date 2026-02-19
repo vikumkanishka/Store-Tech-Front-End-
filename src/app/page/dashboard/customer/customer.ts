@@ -2,6 +2,7 @@ import { NgForOf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CustomerModel } from '../../../../model/types';
 
 
 
@@ -13,7 +14,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class Customer implements OnInit {
 
-  customerList:any = null;
+  customerList: Array<CustomerModel> = [];
 
   constructor(private http: HttpClient,private cdr: ChangeDetectorRef) {
   }
@@ -23,7 +24,7 @@ export class Customer implements OnInit {
   }
 
   getAll() {
-    this.http.get("http://localhost:8080/customer/getallcustomers").subscribe((response) => {
+    this.http.get<CustomerModel[]>("http://localhost:8080/customer/getallcustomers").subscribe((response) => {
       console.log(response);
       this.customerList = response;
       this.cdr.detectChanges();
