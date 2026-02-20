@@ -62,5 +62,12 @@ export class Customer implements OnInit {
   })
   }
 
-  
+  UpdateCustomer():void{
+    console.log("Update Loaded!!!!");
+    
+    this.http.put("http://localhost:8080/customer/updatecustomer",this.customerObj).subscribe(res=>{
+      console.log(res);
+      this.getAll();
+    })
+  }
 }

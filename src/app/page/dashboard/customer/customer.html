@@ -56,7 +56,7 @@
 				<div class="form-actions">
 					<button type="button" class="btn btn-ghost">Clear</button>
 					<button type="button" (click)="addCustomer()" class="btn btn-primary">Save Customer</button>
-					<button type="button" class="btn btn-secondary">Update Customer</button>
+					<button type="button" (click)="UpdateCustomer()" class="btn btn-secondary">Update Customer</button>
 				</div>
 			</div>
 		</section>
@@ -97,6 +97,7 @@
 							<td class="actions-cell">
 								<button
 									type="button"
+									
 									class="icon-btn icon-delete"
 									aria-label="Delete customer">
 								</button>
