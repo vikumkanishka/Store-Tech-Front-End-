@@ -4,6 +4,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CustomerModel } from '../../../../model/types';
 import { FormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 
@@ -17,7 +18,7 @@ export class Customer implements OnInit {
 
   customerList: Array<CustomerModel> = [];
 
-  constructor(private http: HttpClient,private cdr: ChangeDetectorRef) {
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
@@ -33,7 +34,7 @@ export class Customer implements OnInit {
   }
 
 
-  customerObj : CustomerModel = {
+  customerObj: CustomerModel = {
     id: '',
     title: '',
     name: '',
@@ -45,12 +46,19 @@ export class Customer implements OnInit {
     postalCode: ''
   }
 
-  addCustomer():void{
+  addCustomer(): void {
     console.log(this.customerObj);
-    
-    this.http.post("http://localhost:8080/customer/addCustomer",this.customerObj).subscribe(res=>{
+
+    this.http.post("http://localhost:8080/customer/addCustomer", this.customerObj).subscribe(res => {
       console.log(res);
-      
-    })
+      if (res === true) {
+        Swal.fire({
+          title: "Good job!",
+          text: "Customer added successfully!",
+          icon: "success"
+        });
+      }
+      this.getAll();
+  })
   }
 }
