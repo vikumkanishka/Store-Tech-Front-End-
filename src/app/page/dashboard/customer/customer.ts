@@ -70,4 +70,11 @@ export class Customer implements OnInit {
       this.getAll();
     })
   }
+
+  deleteCustomer(id: string): void{
+    this.http.delete("http://localhost:8080/customer/deletecustomer/"+id).subscribe(res=>{
+      console.log(res);
+      this.getAll();
+    })
+  }
 }
