@@ -77,4 +77,18 @@ export class Customer implements OnInit {
       this.getAll();
     })
   }
+
+  clearFields():void{
+    this.customerObj = {
+      id: '',
+      title: '',
+      name: '',
+      dob: {},
+      salary: 0,
+      address: '',
+      city: '',
+      province: '',
+      postalCode: ''
+    }
+  }
 }
